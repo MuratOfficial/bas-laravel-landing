@@ -1,0 +1,56 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
+
+html {
+  overflow: auto !important;
+}
+
+body {
+  overflow: visible !important;
+  min-height: 100vh;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Smooth scroll styles */
+body.smooth-scroll-active {
+  overflow: hidden !important;
+  height: 100%;
+}
+
+.smooth-scroll-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  will-change: transform;
+}
+
+/* iOS fix */
+@supports (-webkit-overflow-scrolling: touch) {
+  body {
+    height: auto;
+    min-height: 100vh;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
